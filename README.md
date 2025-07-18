@@ -1,8 +1,6 @@
-# DockerTrap
+# Dockerized Honeypot
 
-<div align="center">
-	<img width="450" src="dockertrap.png">
-</div>
+
 
 ## TL;DR
 
@@ -91,13 +89,6 @@ A Dockerfile for a base image is included in the `alpinetrap` directory and sets
 
 Make sure to commit the image as "`honeypot:latest`". You may also wish to create additional accounts named `user`, `guest`, `admin`, `temp`, etc., and give them weak passwords like `1234`, or `password` to let brute-force attackers crack your host easily. The IP address of the attacker's host is passed to the container in the environment variable `REMOTE_HOST`. For logging, you may want to configure an rsyslog instance to forward logs to the host machine.
 
-## TODO
 
-1. Firewall rules are bugged and more restrictive than intended
-2. Logging with auditd is still bugged and not working as intended
-3. Docker API honeypot `apitrap.sh` will be replaced by something like [Whaler](https://github.com/oncyberblog/whaler) (redirected from a secured host, possibily on a per-instanced basis like DockerTrap), but should appear as an unsecured host to each honeypot
-4. Auto-installer
 
-## Attribution
 
-Thanks goes to [Peter Kasza](https://github.com/mrschyte) for the origional [Dockerpot](https://github.com/mrschyte/dockerpot); brilliant work!
